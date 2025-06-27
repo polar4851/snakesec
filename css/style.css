@@ -1,0 +1,410 @@
+/* --- css/style.css --- */
+
+/* --- CONFIGURAÇÕES GLOBAIS E PALETA DE CORES --- */
+:root {
+    --background-color: #000000;
+    --main-green: #00ff00;
+    --main-red: #ff1c1c;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --border-color: rgba(0, 255, 0, 0.2);
+    --card-bg: #0a0a0a;
+}
+
+/* --- RESET BÁSICO E ESTILOS DO BODY --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Fira Code', monospace;
+    color: var(--text-primary);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-green);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-shadow: 0 0 8px var(--main-green);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- CABEÇALHO E NAVEGAÇÃO --- */
+.main-header {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.logo span {
+    color: var(--main-green);
+    text-shadow: 0 0 5px var(--main-green);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    font-weight: 500;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--main-green);
+    border-bottom-color: var(--main-green);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-link {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.contact-link:hover {
+    color: var(--main-red);
+    text-shadow: none;
+}
+
+.cta-button {
+    background-color: var(--main-red);
+    color: var(--background-color) !important;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: 2px solid var(--main-red);
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: var(--main-red) !important;
+    box-shadow: 0 0 10px var(--main-red);
+    text-shadow: none;
+}
+
+/* --- MENU MOBILE (HAMBURGER) --- */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+
+/* --- ESTILOS DE PÁGINA COMUM --- */
+.page-header {
+    padding: 100px 0 60px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    color: var(--main-green);
+    text-shadow: 0 0 10px var(--main-green);
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.content-section {
+    padding: 80px 0;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    color: var(--main-green);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.content-section p, .content-section ul li {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.content-section ul {
+    list-style-type: '>> ';
+    padding-left: 30px;
+}
+
+/* --- SEÇÃO HERO (PÁGINA INICIAL) --- */
+.hero {
+    padding: 80px 0;
+}
+
+.section-title {
+    color: var(--main-green);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px var(--main-green);
+    border-bottom: 1px solid var(--main-green);
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text { flex: 1; }
+
+#typing-hero {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    height: 120px; /* Previne pulos de layout */
+    border-right: 3px solid var(--main-green);
+    animation: blink 1s step-end infinite;
+}
+
+.hero-text p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    background-color: var(--main-green);
+    color: var(--background-color);
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 2px solid var(--main-green);
+    cursor: pointer;
+}
+
+.hero-button:hover {
+    background-color: transparent;
+    color: var(--main-green);
+    box-shadow: 0 0 15px var(--main-green);
+}
+
+.hero-features {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.feature-item .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--main-green);
+}
+
+.feature-item h3 { font-size: 1.3rem; margin-bottom: 10px; }
+.feature-item p { color: var(--text-secondary); }
+
+/* --- SEÇÃO SECURITY REALM (Cards) --- */
+.realm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.realm-card {
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.realm-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.15);
+}
+
+.realm-card-img {
+    height: 200px;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-green);
+    font-size: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.realm-card-content { padding: 25px; }
+.realm-card-content h3 { font-size: 1.4rem; margin-bottom: 15px; }
+.realm-card-content p { color: var(--text-secondary); }
+
+/* --- PÁGINA DE CONTATO --- */
+.contact-container {
+    display: flex;
+    gap: 40px;
+}
+.contact-info, .contact-form-container { flex: 1; }
+
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--main-green);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+#form-status {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    display: none; /* Oculto por padrão */
+}
+#form-status.success {
+    display: block;
+    background-color: rgba(0, 255, 0, 0.1);
+    border: 1px solid var(--main-green);
+    color: var(--main-green);
+}
+#form-status.error {
+    display: block;
+    background-color: rgba(255, 28, 28, 0.1);
+    border: 1px solid var(--main-red);
+    color: var(--main-red);
+}
+
+
+/* --- ANIMAÇÕES E FOOTER --- */
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: var(--main-green); }
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main-footer {
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    color: var(--text-secondary);
+}
+
+/* --- MEDIA QUERIES PARA RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+        position: relative;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100vh;
+        background-color: #050505;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        margin-bottom: 40px;
+    }
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1, #typing-hero, .content-section h2 { font-size: 2.2rem; }
+    #typing-hero { height: 80px; }
+    .hero-features { grid-template-columns: 1fr; }
+    .contact-container { flex-direction: column; }
+}
