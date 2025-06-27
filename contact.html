@@ -1,39 +1,77 @@
-<main>
-    <div class="page-header fade-in-section">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - SNAKE Security</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>Get in touch with our team. We're here to answer your questions or collaborate on new projects.</p>
-        </div>
-    </div>
-    <section class="content-section fade-in-section">
-        <div class="container contact-container">
-            <div class="contact-info">
-                <h2>Contact Information</h2>
-                <p>For general inquiries, partnerships, or support, please use the form or reach out to us directly.</p>
-                <ul>
-                    <li><strong>Email:</strong> contact@snakesec.org</li>
-                    <li><strong>GitHub:</strong> /snakesec</li>
+            <a href="index.html" class="logo">SNAKE<span>SEC</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="cybersecurity.html">CyberSecurity</a></li>
+                    <li><a href="andrax-ng.html">ANDRAX-NG</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
                 </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="contact-link" style="color: var(--main-red);">Contact</a>
+                <a href="contact.html" class="cta-button">Become a HERO</a>
             </div>
-            <div class="contact-form-container">
-                <h2>Send a Secure Message</h2>
-                <form id="contact-form" novalidate>
-                    <div class="form-group">
-                        <label for="name">Your Name / Alias:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
-                    </div>
-                    <button type="submit" class="hero-button">Initiate Contact</button>
-                    <div id="form-status"></div>
-                </form>
+            <div class="menu-toggle">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header fade-in-section">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch with our team. We're here to answer your questions or collaborate on new projects.</p>
             </div>
         </div>
-    </section>
-</main>
+        <section class="content-section fade-in-section">
+            <div class="container contact-container">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p>For general inquiries, partnerships, or support, please use the form or reach out to us directly.</p>
+                    <ul>
+                        <li><strong>Email:</strong> contact@snakesec.org</li>
+                        <li><strong>GitHub:</strong> /snakesec</li>
+                    </ul>
+                </div>
+                <div class="contact-form-container">
+                    <h2>Send a Secure Message</h2>
+                    <form id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Your Name / Alias:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="hero-button">Initiate Contact</button>
+                        <div id="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 SNAKE Security. All rights reserved. NON-PROFIT ORGANIZATION.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
